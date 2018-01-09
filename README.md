@@ -8,5 +8,6 @@ The preprocessing pipeline is:
   - Lower case
   - Stem using Porter stemmer
   - Count word frequencies and sequence lengths
-  - Confine all sequences, *x*, to be between *seq_min<x<seqmax*
-  - Remove all sequences containing rare words that occur less then *min*
+  - Confine all sequences, *x*, to be between *seq<sub>min</sub><x<seq<sub>max</sub>*
+  - Remove all sequences containing rare tokens that occur less then *n<sub>min</sub>*
+  - Assign <UNK> token to all rare tokens occuring *n<sub>min</sub>< word < n_<sub>threshold</sub>*, where n_<sub>threshold</sub> is determined heuristically.
